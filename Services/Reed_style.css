@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,400;1,500&display=swap");
+
+:root {
+    --main: #d40219;
+    --border: 0.2rem solid rgba(0, 0, 0, 0.5);
+    --box_shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.8);
+}
+html::-webkit-scrollbar {
+    width: 10px;
+}
+html::-webkit-scrollbar-thumb {
+    background: var(--main);
+}
+html::-webkit-scrollbar-track {
+    background: #000;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Besley", serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    transition: linear 0.2s;
+}
+*::selection {
+    background: var(--main);
+    color: #000;
+}
+section {
+    padding: 2rem 9%;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+.btn {
+    background: var(--main);
+    padding: 0.8rem 3rem;
+    display: inline-block;
+    margin-top: 1rem;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.7rem;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 0.5rem;
+}
+.heading {
+    margin: 120px auto;
+    padding-bottom: 2rem;
+    font-size: 4.5rem;
+    text-align: center;
+}
+/* Header/Navbar Start */
+header {
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 3rem 9%;
+    background: #fff;
+    box-shadow: var(--box_shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    color: #000;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+header .logo span {
+    color: var(--main);
+}
+header .navbar a {
+    font-size: 1.7rem;
+    color: #000;
+    margin: 0 1rem;
+}
+header .navbar a:hover {
+    color: var(--main);
+}
+#LoginBtn .btn {
+    margin-top: 0;
+}
+#LoginBtn i {
+    color: var(--main);
+    font-size: 2.5rem;
+    display: none;
+}
+#MenuBtn {
+    font-size: 2.5rem;
+    color: var(--main);
+    cursor: pointer;
+    display: none;
+}
+
+
+/* Featured Section Start */
+.reed {
+    margin-bottom: 200px;
+}
+.reed .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.reed .row img {
+    width: 500px;
+    height: 500px;
+
+}
+.reed .mmm{
+
+    flex: 1 1 42rem;
+    width: 120px;
+    height: 300px;
+    /*padding: 2rem;*/
+    box-shadow: var(--box_shadow);
+    border: var(--border);
+    border-radius: 0.1rem;
+}
+.reed .mmm img{
+    width: 100%;
+    /*margin-top: -20rem;*/
+}
+
+.reed form {
+
+    flex: 1 1 42rem;
+    padding: 2rem;
+    /*box-shadow: var(--box_shadow);*/
+    /*border: var(--border);*/
+    text-align: center;
+    border-radius: 0.5rem;
+}
+
+.reed .nnnn {
+    color: black;
+    margin-top: 1rem;
+    background: white;
+    /*color: #ff0019;*/
+    font-size: 3rem ;
+    padding-bottom: 2rem;
+}
+.reed .nnn {
+    color: black;
+    margin-top: 1rem;
+    background: white;
+    /*color: #ff0019;*/
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+.reed form .box {
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 1rem 1.2rem;
+    text-transform: none;
+    border: var(--border);
+    font-size: 1.6rem;
+    margin: 0.7rem 0;
+}
+.reed form textarea {
+    resize: none;
+    height: 18rem;
+}
+/* Featured Section End */
+
+
+/* Footer Start */
+footer {
+    background: var(--main);
+    padding: 2rem;
+    text-align: center;
+}
+footer a {
+    color: #fff;
+    font-size: 2.1rem;
+}
+/* Footer End */
+
+/* Theme Toggle */
+
+.themeToggle {
+    position: fixed;
+    top: 10rem;
+    right: -20rem;
+    background: #000;
+    text-align: center;
+    width: 20rem;
+    z-index: 1000;
+}
+.themeToggle.active {
+    right: 0;
+}
+.themeToggle h3 {
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+.themeToggle .buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+.themeToggle .themeBtn {
+    height: 5rem;
+    width: 5rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.themeToggle .ToggleBtn {
+    position: absolute;
+    top: 0;
+    left: -5.9rem;
+    padding: 1.3rem 1.5rem;
+    background: #000;
+    cursor: pointer;
+}
+.themeToggle .ToggleBtn i {
+    color: #fff;
+    font-size: 3rem;
+    animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(360deg);
+    }
+}
+/* Theme Toggle */
+
+/* Media Query */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    header {
+        padding: 2rem;
+    }
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #MenuBtn {
+        display: initial;
+    }
+    .fa-times {
+        transform: rotate(360deg);
+    }
+    header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        border: var(--border);
+        background: #fff;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    header .navbar a {
+        display: block;
+        margin: 2rem;
+        font-size: 2rem;
+        background: #ccc;
+        padding: 1rem;
+    }
+    .home img {
+        margin-top: -10rem;
+    }
+    .reed img {
+        margin-top: -10rem;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+    }
+    .nn img{
+        /*margin-top: -10rem;*/
+        text-align: center;
+        width: 40px;
+        height: 40px;
+    }
+    .r
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    .heading {
+        font-size: 2.5rem;
+    }
+}
